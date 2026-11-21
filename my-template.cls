@@ -38,7 +38,7 @@
 
 \RequirePackage[a4paper,top=2.4cm,bottom=2.4cm,left=2.3cm,right=2.3cm,
                 headheight=15pt]{geometry}
-\RequirePackage{setspace}\setstretch{1.12}
+\RequirePackage{setspace}\setstretch{1.08}
 \setlength{\parskip}{4pt}
 \setlength{\parindent}{0pt}
 \setlength{\emergencystretch}{3em}
@@ -96,10 +96,11 @@
 \renewcommand{\thetable}{\babelsublr{\thechapter.\arabic{table}}}
 \renewcommand{\thefigure}{\babelsublr{\thechapter.\arabic{figure}}}
 % נספחים מסומנים באותיות עבריות
-\g@addto@macro\appendix{\renewcommand{\thechapter}{\ifcase\value{chapter}\or א\or ב\or ג\or ד\or ה\fi}}
+\g@addto@macro\appendix{\renewcommand{\thechapter}{\ifcase\value{chapter}\or א\or ב\or ג\or ד\or ה\fi}%
+  \renewcommand{\thetable}{\thechapter\arabic{table}}\renewcommand{\thefigure}{\thechapter\arabic{figure}}}
 % כותרת לא נשארת לבד בתחתית עמוד
 \RequirePackage{needspace,etoolbox}
-\pretocmd{\section}{\needspace{6\baselineskip}}{}{}
+\pretocmd{\section}{\needspace{7\baselineskip}}{}{}
 \pretocmd{\subsection}{\needspace{4\baselineskip}}{}{}
 \RequirePackage{enumitem}
 \setlist{itemsep=2pt,topsep=3pt,parsep=0pt}
@@ -137,6 +138,7 @@
 \renewcommand{\textfraction}{0.08}\renewcommand{\floatpagefraction}{0.75}
 
 % ארבעה סוגי תיבות: מסקנה, הערה, אזהרה, דוגמה
+\RequirePackage{float}
 \RequirePackage[most]{tcolorbox}
 \tcbset{mybox/.style={enhanced,breakable,boxrule=0.6pt,arc=3pt,
   left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,
