@@ -10,3 +10,4 @@
 | 04 | [צוות אדום](04-red-team.md) | 2026-11-21 18:48 | [`04-red-team.md`](../../work/review/04-red-team.md) |
 | 05 | [בדיקה חוזרת](05-recheck.md) | 2026-11-21 18:59 | [`05-recheck.md`](../../work/review/05-recheck.md) |
 | 06 | [ציון סופי](06-final-grade.md) | 2026-11-21 19:23 | [`06-final-grade.md`](../../work/review/06-final-grade.md) |
+| 07 | [ציון חוזר](07-regrade.md) | 2026-11-21 22:51 | [`07-regrade.md`](../../work/review/07-regrade.md) |
