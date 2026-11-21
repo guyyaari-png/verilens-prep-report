@@ -1,0 +1,52 @@
+\chapter{טבלת עמידה בדרישות המטלה}\label{app:compliance}
+
+הטבלה מפנה מכל דרישה של מטלה \num{2}, כפי שהוגדרה בסיכום שיעור \num{3}~\cite{segal2026l03}, למקום שבו היא נענית. זהו כלי סטנדרטי בהגשות למכרזים: הוא חוסך לבודק חיפוש ומראה שאף דרישה לא נשכחה~\cite{shipley} (טבלה~\ref{tab:comply}).
+
+\begin{table}[!htbp]\centering
+\caption{עמידה בדרישות המטלה: כל דרישה ומיקום המענה}\label{tab:comply}
+\small
+\begin{tabularx}{\linewidth}{@{}Y Y@{}}
+\toprule
+\colhead{דרישה} & \colhead{איפה היא נענית} \\
+\midrule
+דוח מכין כמסמך \en{PDF} שנבנה בלטך & הקובץ \code{Haifa-01-ex02.pdf}, מהידור \code{main.tex} \\
+מבנה הדוח המכין: הגדרת הבעיה, סקר ספרות, תוכנית וסיכונים & פרק~\ref{ch:problem} (עמ׳ \pageref{ch:problem}), פרק~\ref{ch:lit} (עמ׳ \pageref{ch:lit}), פרק~\ref{ch:mgmt} (עמ׳ \pageref{ch:mgmt}), פרק~\ref{ch:risk} (עמ׳ \pageref{ch:risk}) \\
+פרויקט מסודר: קובץ ראשי, פרק בכל קובץ, תמונות במקום אחד, מקורות, טיוטות בנפרד & \code{main.tex}, \code{chapters/}, \code{figures/}, \code{references.bib}, \code{work/}; סעיף~\ref{sec:qa} \\
+קובץ \en{CLS} משלנו עם העיצובים & \code{my-template.cls} גרסה \num{1.0}, יומן שינויים ורשימת פקודות ב-\code{TEMPLATE.md} \\
+עברית ואנגלית תקינות & פקודות \code{\textbackslash en} ו-\code{\textbackslash num} בכל הדוח; בדיקת כיווניות בטבלה~\ref{tab:review} \\
+מקורות אמיתיים, בבסיס נתונים & \code{references.bib} עם \en{biber}; בדיקת מקורות בטבלה~\ref{tab:review} \\
+כמה סוכני בדיקה, שכל אחד בודק משהו אחר & טבלה~\ref{tab:review} (עמ׳ \pageref{tab:review}); הדוחות המלאים ב-\code{work/review/} \\
+הידור בארבע הרצות & \code{build.ps1} ו-\code{build.sh}: \en{lualatex}, \en{biber}, \en{lualatex}, \en{lualatex} \\
+מאגר \en{GitHub} עם \en{README} והקבצים הסופיים & \code{README.md} עם צילומי מסך, \code{prompts/} עם הפרומפטים הממוספרים \\
+חשיבה בקנה מידה גדול & פרק~\ref{ch:goals} ופרק~\ref{ch:business}: מ-\num{5} מערכות פיילוט ל-\num{1,000} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\chapter{מטריצת עקיבות: דרישות מול בדיקות}\label{app:trace}
+
+כל דרישה בעדיפות חובה (\textbf{M}) מקושרת לבדיקה. דרישה שהאימות שלה הוא בחינה (\textbf{I}) או הדגמה (\textbf{D}) נבדקת ברשימת הקבלה הטכנית בנוכחות המרצה (טבלה~\ref{tab:trace}).
+
+\begin{table}[!htbp]\centering
+\caption{עקיבות דרישות חובה}\label{tab:trace}
+\small
+\begin{tabularx}{\linewidth}{@{}l Y l Y@{}}
+\toprule
+\textbf{דרישה} & \textbf{בדיקה} & \textbf{דרישה} & \textbf{בדיקה} \\
+\midrule
+\req{FR-01} & \req{T-07}, \req{D-10} & \req{FR-19} & \req{T-08} \\
+\req{FR-02} & \req{T-07} & \req{PR-01} & \req{T-07} \\
+\req{FR-03} & בחינת קבלה & \req{PR-02} & \req{T-07} + ניתוח \\
+\req{FR-04} & \req{T-03} & \req{PR-03} & ניטור בפיילוט \\
+\req{FR-05} & \req{T-03} & \req{PR-04} & \req{T-01} \\
+\req{FR-07} & \req{T-01} & \req{PR-05} & \req{T-02} \\
+\req{FR-08} & \req{T-04} & \req{SR-01} & \req{T-12} \\
+\req{FR-10} & \req{T-01} (ממצאי הקשר) & \req{SR-02} & \req{T-05}, \req{T-12} \\
+\req{FR-13} & \req{T-01} & \req{SR-03} & בחינת קבלה \\
+\req{FR-14} & \req{T-05} & \req{SR-04} & בחינה משפטית \\
+\req{FR-15} & \req{T-11} & \req{CR-01} & \req{D-10} \\
+\req{FR-17} & \req{T-06} & \req{CR-02} & \req{D-02} \\
+\req{FR-18} & \req{D-07} & \req{CR-03} & בחינה משפטית \\
+\bottomrule
+\end{tabularx}
+\end{table}

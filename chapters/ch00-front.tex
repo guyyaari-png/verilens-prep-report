@@ -1,0 +1,56 @@
+% ch00-front.tex — בקרת מסמך, מונחים, תוכן עניינים ורשימות
+\chapter*{בקרת מסמך ואישור}
+\addcontentsline{toc}{chapter}{בקרת מסמך ואישור}
+\markboth{בקרת מסמך ואישור}{}
+
+דוח מכין זה הוא חוזה בין המגישים לבין המרצה. לאחר החתימה, כל תוצר, שיטה, גרף וקריטריון קבלה שמוגדרים בו מחייבים את שני הצדדים, וכל שינוי ייעשה רק בבקשת שינוי (\en{Change Request}) כתובה ומאושרת, לפי סעיף~\ref{sec:change}.
+
+\begin{table}[!htbp]\centering
+\caption{היסטוריית גרסאות}\label{tab:versions}
+\begin{tabularx}{\linewidth}{@{}l l Y@{}}
+\toprule
+\colhead{גרסה} & \colhead{תאריך} & \colhead{תיאור השינוי} \\
+\midrule
+\num{1.0} & \num{10.11.2026} & טיוטה מלאה ראשונה \\
+\num{1.1} & \num{10.11.2026} & תקציר בשיטת ״השורה התחתונה קודם״, יתרונות מבדלים, הנחות יסוד, מסמך ממשקים, בסיס אומדן ורשימת פעולות פתוחות \\
+\num{2.0} & \num{21.11.2026} & מעבר ל-\en{LuaLaTeX} ולתבנית \code{my-template.cls}, פרויקט מסודר (פרק בכל קובץ), מקורות ב-\en{biber}, עדכון פרק המתחרים, וסבב סוכני בדיקה \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]\centering
+\caption{חתימות אישור}\label{tab:sign}
+\begin{tabularx}{\linewidth}{@{}l Y l l@{}}
+\toprule
+\colhead{תפקיד} & \colhead{שם} & \colhead{חתימה} & \colhead{תאריך} \\
+\midrule
+מגיש (הספק) & גיא יערי & \rule{2.6cm}{0.4pt} & \rule{1.8cm}{0.4pt} \\
+מגיש (הספק) & פז ניסים & \rule{2.6cm}{0.4pt} & \rule{1.8cm}{0.4pt} \\
+מרצה (הלקוח) & ד״ר יורם סגל & \rule{2.6cm}{0.4pt} & \rule{1.8cm}{0.4pt} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section*{רשימת קיצורים ומונחים}
+\begin{table}[!htbp]\centering
+\begin{tabularx}{\linewidth}{@{}l Y@{}}
+\toprule
+\colhead{מונח} & \colhead{פירוש} \\
+\midrule
+\en{AI} (בינה מלאכותית) & מערכות לומדות; בדוח זה בעיקר מחוללי תמונות (\en{Diffusion}, \en{GAN}) \\
+\en{C2PA} & \en{Coalition for Content Provenance and Authenticity}: תקן פתוח לחתימה קריפטוגרפית על מקור התוכן \\
+\en{Content Credentials} & ״תעודת מקור״ שמוטמעת בקובץ לפי \en{C2PA}: מי צילם, באיזה מכשיר, אילו עריכות בוצעו \\
+\en{CMS} & מערכת ניהול התוכן של אתר החדשות \\
+\en{ROC} & עקומה שמציגה את שיעור הגילוי (\en{TPR}) מול שיעור התרעות השווא (\en{FPR}) \\
+\en{MFA} & \en{Made For Advertising}: אתרים שנבנו כדי לגרוף הכנסות מפרסום פרוגרמטי \\
+\en{TRUTH-IMG} & התקן האתי שמוצע בפרויקט זה לטיפול בתמונות במערכות חדשות \\
+טראפיק & נפח הכניסות לאתר או לפוסט; המדד שעליו נשען מודל ההכנסות מפרסום \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\clearpage
+{\small\setlength{\parskip}{0pt}\setstretch{1.0}\tableofcontents}
+
+\clearpage
+{\small\setlength{\parskip}{0pt}\listoffigures\listoftables}

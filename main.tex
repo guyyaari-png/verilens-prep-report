@@ -1,0 +1,40 @@
+% main.tex — הקובץ הראשי: מחבר את הפרקים. אין כאן עיצוב; כל העיצוב בתבנית.
+% הידור (ארבע הרצות): lualatex -> biber -> lualatex -> lualatex   (ראו build.ps1)
+\documentclass{my-template}
+\addbibresource{references.bib}
+
+\reporttagline{דוח מכין לפרויקט · מטלה \num{2}}
+\reporttitle{\en{VeriLens}}
+\reportsubtitle{פלטפורמה לאימות תמונות ותקן אתי\\[4pt] למערכות חדשות בעידן הבינה המלאכותית}
+\students{גיא יערי ופז ניסים}
+\course{יישומי \en{Vibe Coding} ו-\en{AI} במדע וביום-יום}
+\lecturer{ד״ר יורם סגל}
+\institution{אוניברסיטת חיפה, סמסטר א׳ תשפ״ז}
+\reportdate{\num{21.11.2026}}
+\docversion{\num{2.0}}
+\shorttitle{דוח מכין · \en{VeriLens}}
+
+\hypersetup{pdftitle={VeriLens: דוח מכין},pdfauthor={גיא יערי, פז ניסים},pdfsubject={מטלה 2, יישומי Vibe Coding ו-AI},pdfkeywords={VeriLens, C2PA, AI, אתיקה עיתונאית}}
+\begin{document}
+\makecover
+\input{chapters/ch00-front}
+\input{chapters/ch01-exec}
+\input{chapters/ch02-intro}
+\input{chapters/ch03-problem}
+\input{chapters/ch04-literature}
+\input{chapters/ch05-goals}
+\input{chapters/ch06-requirements}
+\input{chapters/ch07-alternatives}
+\input{chapters/ch08-design}
+\input{chapters/ch09-method}
+\input{chapters/ch10-verification}
+\input{chapters/ch11-management}
+\input{chapters/ch12-budget}
+\input{chapters/ch13-risks}
+\input{chapters/ch14-deliverables}
+\input{chapters/ch15-business}
+\input{chapters/ch16-summary}
+\printreferences
+\appendix
+\input{chapters/app-compliance}
+\end{document}

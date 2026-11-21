@@ -1,0 +1,68 @@
+\chapter{ניהול הפרויקט}\label{ch:mgmt}
+
+\section{עץ פירוק עבודה}
+
+ראו איור~\ref{fig:wbs}.
+
+\begin{figure}[!htbp]
+\begin{ltrdiagram}
+\input{figures/fig-wbs}
+\end{ltrdiagram}
+\caption{עץ פירוק עבודה: שש חבילות עבודה, ולכל אחת שלושה תוצרים}\label{fig:wbs}
+\end{figure}
+
+\section{לוח זמנים}
+הפרויקט נמשך \num{18} חודשים, מינואר \num{2027} עד יוני \num{2028}. הנתיב הקריטי עובר דרך בניית המאגרים, פיתוח הגלאים, הכיול, והקבלה הטכנית: עיכוב בכל אחד מהם מעכב את כל הפרויקט. התקן האתי מתנהל במקביל וכולל מרווח ביטחון של חודשיים (איור~\ref{fig:gantt}).
+
+\begin{figure}[!htbp]
+\begin{ltrdiagram}
+\input{figures/fig-gantt}
+\end{ltrdiagram}
+\caption{גאנט: הנתיב הקריטי עובר דרך המאגרים, הכיול והקבלה הטכנית}\label{fig:gantt}
+\end{figure}
+
+\section{אבני דרך}
+
+ראו טבלה~\ref{tab:miles}.
+
+\begin{table}[!htbp]\centering
+\caption{אבני הדרך, התוצר בכל אחת והקשר לדוחות הקורס}\label{tab:miles}
+\begin{tabularx}{\linewidth}{@{}l l Y@{}}
+\toprule
+\textbf{אבן דרך} & \textbf{חודש} & \textbf{תוצר מחייב} \\
+\midrule
+\en{M0}: אישור דוח מכין & \num{0} & מסמך זה, חתום \\
+\en{M1}: מאגרים מוכנים & \num{5} & מאגר אימון, כיול ו-\en{VL-Wild} (אצל צד שלישי) \\
+\en{M2}: דוח התקדמות & \num{7} & דוח התקדמות לפי תבנית הקורס; גלאי ראשון ותוצאות ביניים \\
+\en{M3}: טיוטת תקן לציבור & \num{8} & \en{TRUTH-IMG} גרסה \num{0.9} לסבב הערות \\
+\en{M4}: קבלה טכנית & \num{12} & תוצאות \req{T-01} עד \req{T-08} \\
+\en{M5}: פיילוט פעיל & \num{13} & \num{5} מערכות חדשות מחוברות \\
+\en{M6}: קבלה מבצעית ודוח סיום & \num{18} & תוצאות \req{T-09} עד \req{T-11}, \en{TRUTH-IMG} \num{1.0}, דוח סיום \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{צוות ואחריות}
+
+ראו טבלה~\ref{tab:raci}.
+
+\begin{table}[!htbp]\centering
+\caption{מטריצת \en{RACI}: \textbf{R} מבצע, \textbf{A} אחראי, \textbf{C} מתייעץ, \textbf{I} מעודכן}\label{tab:raci}
+\begin{tabularx}{\linewidth}{@{}Y c c c c c@{}}
+\toprule
+\textbf{חבילת עבודה} & \textbf{מנכ״ל/ית} & \textbf{\en{CTO}} & \textbf{ראש/ת \en{ML}} & \textbf{ראש/ת אתיקה} & \textbf{מוצר} \\
+\midrule
+\num{1}. ניהול & A/R & C & I & I & C \\
+\num{2}. מאגרי נתונים & I & A & R & C & I \\
+\num{3}. מנוע אימות & I & A & R & I & C \\
+\num{4}. מסוף ושילוב & I & A & C & C & R \\
+\num{5}. תקן אתי & A & I & I & R & C \\
+\num{6}. פיילוט & A & C & C & R & R \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+תפקידי הטבלה הם תפקידים בחברה המתוכננת; בשלב הדוח המכין שני המייסדים, גיא ופז, ממלאים את כולם. הצוות בשיאו מונה \num{14} אנשים: \num{6} מהנדסי תוכנה, \num{3} חוקרי למידת מכונה, \num{2} בודקי אימות (מודיעין גלוי), מעצב/ת מוצר, ראש/ת אתיקה עם רקע עיתונאי, ומנכ״ל/ית.
+
+\section{בקרת שינויים}\label{sec:change}
+כיוון שהדוח הוא חוזה, כל שינוי בתוצר, בקריטריון קבלה, בגרף מוגדר או במועד אבן דרך מחייב בקשת שינוי כתובה. הבקשה כוללת: מה משתנה, למה, ההשפעה על לו״ז, תקציב וסיכונים, ואישור בכתב של המרצה. שינויים ללא אישור אינם מחייבים את המרצה בבדיקה.
