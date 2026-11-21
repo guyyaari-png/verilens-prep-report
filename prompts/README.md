@@ -20,3 +20,4 @@
 | 14 | [14-self-grade.md](14-self-grade.md) | 2026-11-21 | שים אז 85, וזה nisim |
 | 15 | [15-aim-for-100.md](15-aim-for-100.md) | 2026-11-21 | אחרי ה70 הזה אני רוצה 100 |
 | 16 | [16-approve-all-fixes.md](16-approve-all-fixes.md) | 2026-11-21 | מאשר לך את כל המשימות, תרוץ עליהם |
+| 17 | [17-enforcement.md](17-enforcement.md) | 2026-11-22 | איך נאכף התקן האתי |
