@@ -1,0 +1,24 @@
+% gantt: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{ganttchart}[
+  x unit=0.62cm, y unit chart=0.52cm, vgrid={*1{draw=black!8}},
+  title label font=\sffamily\scriptsize, bar label font=\sffamily\scriptsize,
+  milestone label font=\sffamily\scriptsize\bfseries,
+  bar/.append style={fill=acc!45,draw=acc}, bar height=0.55,
+  group/.append style={fill=ink}, group label font=\sffamily\scriptsize\bfseries,
+  milestone/.append style={fill=acc2,draw=acc2},
+  link/.style={-{Stealth[length=4pt]},acc2,thick}]{1}{18}
+\gantttitle{2027}{12}\gantttitle{2028}{6}\\
+\gantttitlelist{1,...,18}{1}\\
+\ganttgroup{\he{1. ניהול}}{1}{18}\\
+\ganttbar[name=d1]{\he{2. מאגרי נתונים}}{1}{5}\\
+\ganttbar[name=d2]{\he{מנוע: שכבות 1 עד 3}}{3}{9}\\
+\ganttbar[name=d3]{\he{מנוע: שקלול וכיול}}{8}{11}\\
+\ganttbar{\he{4. מסוף ושילוב}}{5}{12}\\
+\ganttbar{\he{5. תקן אתי}}{2}{10}\\
+\ganttmilestone[name=m1]{\he{קבלה טכנית}}{12}\\
+\ganttbar[name=p]{\he{6. פיילוט}}{13}{18}\\
+\ganttmilestone[milestone left shift=-0.5,milestone right shift=-0.5]{\he{קבלה מבצעית}}{18}
+\ganttlink{d1}{d3}
+\ganttlink{d3}{m1}
+\ganttlink{m1}{p}
+\end{ganttchart}

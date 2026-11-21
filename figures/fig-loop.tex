@@ -1,0 +1,17 @@
+% loop: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[
+  st/.style={draw=acc,fill=soft,rounded corners=4pt,minimum width=3.3cm,minimum height=1.05cm,align=center,font=\sffamily\small},
+  ar/.style={-{Stealth[length=7pt]},thick,acc}]
+\node[st] (a) at (90:3.0)  {\he{יצירת תמונה סינתטית}\\\he{עלות כמעט אפסית}};
+\node[st] (b) at (18:3.9)  {\he{מעורבות רגשית}\\\he{שיתופים ותגובות}};
+\node[st] (c) at (-54:3.2) {\he{הגברה אלגוריתמית}\\\he{לקהל שאינו עוקב}};
+\node[st] (d) at (-126:3.2){\he{טראפיק לאתר}\\\he{או לעמוד}};
+\node[st] (e) at (162:3.9) {\he{הכנסות פרסום}\\\he{פרוגרמטי}};
+\draw[ar] (a) to[bend left=12] (b);
+\draw[ar] (b) to[bend left=12] (c);
+\draw[ar] (c) to[bend left=12] (d);
+\draw[ar] (d) to[bend left=12] (e);
+\draw[ar] (e) to[bend left=12] (a);
+\node[draw=acc2,fill=soft2,rounded corners=4pt,align=center,font=\sffamily\small,text width=2.8cm] at (0,0)
+  {\he{נקודות שבירה ש-\en{VeriLens}}\\\he{תוקפת: אימות לפני}\\\he{פרסום וחסימת מימון}};
+\end{tikzpicture}

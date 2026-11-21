@@ -1,0 +1,15 @@
+% altscore: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}
+\begin{axis}[
+  xbar, width=11cm, height=4.6cm, xmin=0, xmax=100,
+  symbolic y coords={C,A,B,D}, ytick={C,A,B,D},
+  yticklabels={\he{ג׳ בדיקה אנושית},\he{א׳ גלאי בלבד},\he{ב׳ מקור בלבד},\he{ד׳ היברידי, נבחר}},
+  yticklabel style={font=\sffamily\small},
+  xlabel={\he{ציון משוקלל, מתוך 100}}, xlabel style={font=\sffamily\small},
+  nodes near coords, nodes near coords style={font=\sffamily\small},
+  bar width=11pt, axis x line*=bottom, axis y line*=left, xmajorgrids, grid style={gray!25},
+  enlarge y limits=0.2]
+\addplot[fill=acc!35,draw=acc,bar shift=0pt] coordinates {(54,C) (68,A) (70,B)};
+\addplot[fill=acc2,draw=acc2,bar shift=0pt] coordinates {(84,D)};
+\end{axis}
+\end{tikzpicture}

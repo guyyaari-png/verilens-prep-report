@@ -1,0 +1,24 @@
+% stake: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\small,
+  pt/.style={circle,fill=acc2,inner sep=2.2pt},
+  lb/.style={font=\sffamily\scriptsize,align=center}]
+\draw[->,thick,ink] (0,0)--(10.4,0) node[below left,lb]{\he{השפעה על הפתרון} $\rightarrow$};
+\draw[->,thick,ink] (0,0)--(0,6.4) node[above,lb]{\he{פגיעה מהבעיה} $\uparrow$};
+\draw[dashed,gray] (5.2,0)--(5.2,6.2);
+\draw[dashed,gray] (0,3.1)--(10.2,3.1);
+\node[lb,gray] at (2.6,6.0) {\he{לשתף ולהגן}};
+\node[lb,gray] at (7.8,6.0) {\he{שותפים מרכזיים}};
+\node[lb,gray] at (2.6,0.35) {\he{לעדכן}};
+\node[lb,gray] at (7.8,0.35) {\he{לרתום}};
+\foreach \x/\y/\t in {
+ 1.4/5.2/{\he{הציבור / הקוראים}},
+ 3.6/4.4/{\he{צלמי עיתונות}},
+ 8.6/5.0/{\he{עורכים ומנהלי מערכות}},
+ 7.0/4.3/{\he{מועצת העיתונות / גופי אתיקה}},
+ 9.0/2.2/{\he{רשתות פרסום פרוגרמטי}},
+ 6.6/1.4/{\he{פלטפורמות רשת חברתית}},
+ 3.0/1.6/{\he{רגולטורים}},
+ 6.0/2.6/{\he{יצרני מצלמות ו-\en{C2PA}}}}{
+ \node[pt] at (\x,\y) {};
+ \node[lb,anchor=south] at (\x,\y+0.08) {\t};}
+\end{tikzpicture}

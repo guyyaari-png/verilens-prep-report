@@ -1,0 +1,17 @@
+% arch: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\small,
+  bx/.style={draw=acc,fill=soft,rounded corners=4pt,minimum width=3.3cm,minimum height=1.2cm,align=center},
+  hl/.style={draw=acc2,fill=soft2,rounded corners=4pt,minimum width=3.3cm,minimum height=1.2cm,align=center},
+  ar/.style={-{Stealth[length=6pt]},thick,ink!70}]
+\node[bx] (in) at (0,0) {\he{\textbf{קליטה}}\\\he{טביעה ונרמול}};
+\node[bx] (l1) at (4.2,2.0) {\he{\textbf{שכבה 1: מקור}}\\\he{\en{C2PA} וסימני מים}};
+\node[bx] (l2) at (4.2,0) {\he{\textbf{שכבה 2: זיהוי}}\\\he{4 גלאים בלתי תלויים}};
+\node[bx] (l3) at (4.2,-2.0) {\he{\textbf{שכבה 3: הקשר}}\\\he{מקור ראשון, מטא דאטה}};
+\node[hl] (fu) at (8.4,0) {\he{\textbf{שכבה 4: שקלול}}\\\he{ציון מכויל 0 עד 100}};
+\node[bx] (ui) at (12.2,1.1) {\he{\textbf{מסוף העורך}}\\\he{החלטה ונימוק}};
+\node[bx] (lg) at (12.2,-1.1) {\he{\textbf{יומן ודיווח}}\\\he{תיעוד וחתימה}};
+\draw[ar] (in)--(l1); \draw[ar] (in)--(l2); \draw[ar] (in)--(l3);
+\draw[ar] (l1)--(fu); \draw[ar] (l2)--(fu); \draw[ar] (l3)--(fu);
+\draw[ar] (fu)--(ui); \draw[ar] (ui)--(lg);
+\draw[ar,dashed,acc2] (l1.north) to[bend left=25] node[above,font=\sffamily\scriptsize]{\he{מסלול ירוק: תעודה תקפה}} (ui.north);
+\end{tikzpicture}

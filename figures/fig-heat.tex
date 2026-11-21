@@ -1,0 +1,14 @@
+% heat: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\scriptsize]
+\foreach \p in {1,...,5}{\foreach \i in {1,...,5}{
+  \pgfmathsetmacro{\e}{\p*\i}
+  \ifdim\e pt<6pt \def\cc{okc!25}\else\ifdim\e pt<12pt \def\cc{midc!35}\else \def\cc{badc!30}\fi\fi
+  \fill[\cc,draw=white,line width=1.2pt] (\i*1.25-1.25,\p*0.95-0.95) rectangle ++(1.25,0.95);
+}}
+\foreach \i in {1,...,5}{\node at (\i*1.25-0.625,-0.3) {\i};}
+\foreach \p in {1,...,5}{\node at (-0.3,\p*0.95-0.475) {\p};}
+\node at (3.125,-0.75) {\he{השפעה \en{I}}};
+\node[rotate=90] at (-0.85,2.375) {\he{הסתברות \en{P}}};
+\foreach \r/\p/\i/\dx in {01/5/4/0, 02/3/5/0, 03/4/4/0, 04/3/3/-0.32, 06/3/3/0.32, 05/2/5/-0.32, 07/2/5/0.32, 08/2/4/-0.32, 10/2/4/0.32, 09/3/2/0}{
+  \node[circle,fill=ink,text=white,inner sep=1.2pt,font=\sffamily\scriptsize\bfseries] at (\i*1.25-0.625+\dx,\p*0.95-0.475) {R\r};}
+\end{tikzpicture}

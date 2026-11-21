@@ -1,0 +1,14 @@
+% budget: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}
+\begin{axis}[xbar stacked, width=13.5cm, height=2.6cm, xmin=0, xmax=9600,
+  ytick=\empty, axis y line=none, axis x line*=bottom,
+  xlabel={\he{אלפי ₪}}, xlabel style={font=\sffamily\scriptsize},
+  ticklabel style={font=\sffamily\scriptsize}, bar width=16pt,
+  legend style={font=\sffamily\scriptsize,at={(0.5,1.15)},anchor=south,legend columns=4,draw=none}]
+\addplot[fill=acc,draw=white] coordinates {(6930,0)};
+\addplot[fill=acc!55,draw=white] coordinates {(840,0)};
+\addplot[fill=acc!25,draw=white] coordinates {(660,0)};
+\addplot[fill=acc2,draw=white] coordinates {(1170,0)};
+\legend{\he{כוח אדם: 72\%},\he{מחשוב ונתונים: 9\%},\he{משפט, אבטחה, תקן ותפעול: 7\%},\he{רזרבה ועיגול: 12\%}}
+\end{axis}
+\end{tikzpicture}

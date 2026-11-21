@@ -1,0 +1,15 @@
+% timeline: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[
+  ev/.style={draw=acc,fill=white,rounded corners=3pt,text width=3.25cm,align=center,font=\sffamily\scriptsize,inner sep=4pt}]
+\draw[very thick,ink,-{Stealth}] (0,0)--(15.6,0);
+\foreach \x/\y/\lab/\t/\dir in {
+  1.6/2023-05/{\he{פיצוץ מזויף בפנטגון}\\\he{חשבונות מאומתים הפיצו; המדדים ירדו לזמן קצר}}/a/1,
+  5.6/2024-04/{\he{עמודי ספאם בפייסבוק}\\\he{125 עמודים; פוסט אחד: 40 מיליון צפיות}}/b/-1,
+  9.6/2024-05/{\he{״כל העיניים על רפיח״}\\\he{תמונה סינתטית; כ-45 מיליון שיתופים}}/c/1,
+  13.6/2024-10/{\he{הוריקן הלן}\\\he{״ילדה עם גור״ סינתטית שימשה למסר פוליטי}}/d/-1}{
+  \fill[acc2] (\x,0) circle (3.2pt);
+  \node[font=\sffamily\scriptsize\bfseries,ink] at (\x,-0.38*\dir) {\y};
+  \node[ev] (\t) at (\x,1.55*\dir) {\lab};
+  \draw[acc,thin] (\x,0)--(\t);
+}
+\end{tikzpicture}

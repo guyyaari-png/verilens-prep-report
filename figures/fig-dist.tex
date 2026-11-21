@@ -1,0 +1,21 @@
+% dist: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}
+\begin{axis}[width=12cm,height=5.2cm,ybar,bar width=7pt,
+  xmin=-2,xmax=102,ymin=0,ymax=84,
+  xlabel={\he{ציון \en{VeriLens}}}, ylabel={\he{\% מכל סוג}},
+  xlabel style={font=\sffamily\small}, ylabel style={font=\sffamily\small},
+  ticklabel style={font=\sffamily\scriptsize},
+  legend style={font=\sffamily\scriptsize,at={(0.5,0.84)},anchor=north,legend columns=2,draw=none},
+  area legend,
+  axis x line*=bottom, axis y line*=left]
+\fill[okc!8] (axis cs:-2,0) rectangle (axis cs:30,84);
+\fill[midc!14] (axis cs:30,0) rectangle (axis cs:80,84);
+\fill[badc!8] (axis cs:80,0) rectangle (axis cs:102,84);
+\addplot[fill=acc!55,draw=acc] coordinates {(5,45)(15,30)(25,13)(35,5)(45,2.5)(55,1.5)(65,1)(75,1)(85,0.6)(95,0.4)};
+\addplot[fill=acc2!75,draw=acc2] coordinates {(5,0.5)(15,0.5)(25,1)(35,1)(45,1)(55,1.5)(65,1.5)(75,2)(85,16)(95,75)};
+\legend{\he{תמונות אמיתיות},\he{תמונות סינתטיות}}
+\node[font=\sffamily\scriptsize] at (axis cs:14,79) {\he{״מאומת״}};
+\node[font=\sffamily\scriptsize] at (axis cs:55,79) {\he{״לא ודאי״}};
+\node[font=\sffamily\scriptsize] at (axis cs:91,79) {\he{״חשד גבוה״}};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+% context: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\small,
+  core/.style={draw=acc2,fill=soft2,very thick,rounded corners=6pt,minimum width=3.6cm,minimum height=1.6cm,align=center},
+  ext/.style={draw=acc,fill=soft,rounded corners=4pt,minimum width=3.0cm,minimum height=0.95cm,align=center},
+  ar/.style={{Stealth[length=5pt]}-{Stealth[length=5pt]},thick,ink!70}]
+\node[core] (v) at (0,0) {\en{\textbf{VeriLens}}\\\he{פלטפורמת אימות}};
+\node[ext] (cms) at (-5,1.6) {\he{מערכת ניהול תוכן}\\\en{(CMS)}};
+\node[ext] (app) at (-5,-1.6) {\he{אפליקציית הצלם}\\\he{חתימת \en{C2PA}}};
+\node[ext] (rev) at (5,1.6) {\he{חיפוש תמונה הפוך}};
+\node[ext] (crl) at (5,0) {\he{רשימות ביטול}\\\en{C2PA}};
+\node[ext] (ads) at (5,-1.6) {\he{רשתות פרסום}\\\he{ציון שלמות}};
+\node[ext] (read) at (0,-2.9) {\he{קוראים: תווית}\\\he{ותעודת מקור}};
+\draw[ar] (cms)--(v) node[midway,above,sloped,font=\sffamily\scriptsize]{\he{תמונה / החלטה}};
+\draw[ar] (app)--(v) node[midway,below,sloped,font=\sffamily\scriptsize]{\he{תמונה חתומה}};
+\draw[ar] (rev)--(v);
+\draw[ar] (crl)--(v);
+\draw[ar] (ads)--(v) node[midway,below,sloped,font=\sffamily\scriptsize]{\he{ציון מצרפי}};
+\draw[-{Stealth[length=5pt]},thick,ink!70] (v)--(read);
+\end{tikzpicture}

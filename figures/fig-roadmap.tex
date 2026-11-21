@@ -1,0 +1,15 @@
+% roadmap: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\scriptsize,
+  ph/.style={draw=acc,fill=soft,rounded corners=4pt,text width=2.7cm,minimum height=2.3cm,align=center,inner sep=4pt},
+  gt/.style={diamond,fill=acc2,inner sep=2.2pt}]
+\draw[very thick,ink,-{Stealth}] (-0.2,0)--(15.4,0);
+\foreach \x/\t/\b/\g in {
+ 1.4/{\he{\textbf{שנה 1 עד 1.5}}}/{\he{פיתוח ופיילוט}\\\he{5 מערכות בישראל}\\\he{2 מיליון תמונות/חודש}}/{\he{קבלה מבצעית}},
+ 4.5/{\he{\textbf{שנה 2}}}/{\he{אירופה, סעיף 50}\\\he{100 מערכות}\\\he{10 מיליון/חודש}}/{\he{100 לקוחות משלמים}},
+ 7.6/{\he{\textbf{שנה 3}}}/{\he{גלובלי, 30 מדינות}\\\he{1,000 מערכות}\\\he{50 מיליון/חודש}}/{\he{איזון תפעולי}},
+ 10.7/{\he{\textbf{שנה 4}}}/{\he{וידאו ואודיו}\\\he{שותפות עם רשת פרסום}}/{\he{גלאי וידאו בתקן}},
+ 13.8/{\he{\textbf{שנה 5}}}/{\he{\en{TRUTH-IMG} כתקן}\\\he{תעשייתי מוכר}}/{\he{הכרה רשמית}}}{
+ \node[ph,anchor=south] at (\x,0.35) {\t\\[2pt]\b};
+ \node[gt] at (\x,0) {};
+ \node[font=\sffamily\scriptsize,text=acc2,align=center] at (\x,-0.45) {\g};}
+\end{tikzpicture}

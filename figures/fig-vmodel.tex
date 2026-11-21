@@ -1,0 +1,18 @@
+% vmodel: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\scriptsize,
+  bx/.style={draw=acc,fill=soft,rounded corners=3pt,minimum width=3.1cm,minimum height=0.75cm,align=center},
+  vb/.style={draw=okc,fill=okc!10,rounded corners=3pt,minimum width=3.1cm,minimum height=0.75cm,align=center},
+  ar/.style={-{Stealth[length=5pt]},thick,ink!60}]
+\node[bx] (l1) at (0,3.6) {\he{דרישות לקוח ותקן אתי}};
+\node[bx] (l2) at (1.3,2.4) {\he{דרישות מערכת, פרק 6}};
+\node[bx] (l3) at (2.6,1.2) {\he{ארכיטקטורה, פרק 8}};
+\node[draw=acc2,fill=soft2,rounded corners=3pt,minimum width=3.1cm,minimum height=0.75cm,align=center] (b) at (5.2,0) {\he{מימוש בספרינטים}};
+\node[vb] (r3) at (7.8,1.2) {\he{בדיקות שילוב}};
+\node[vb] (r2) at (9.1,2.4) {\he{בדיקות מערכת על \en{VL-Wild}}};
+\node[vb] (r1) at (10.4,3.6) {\he{פיילוט וקבלה}};
+\draw[ar] (l1)--(l2); \draw[ar] (l2)--(l3); \draw[ar] (l3)--(b);
+\draw[ar] (b)--(r3); \draw[ar] (r3)--(r2); \draw[ar] (r2)--(r1);
+\draw[dashed,gray,<->] (l1)--(r1) node[midway,above]{\he{קריטריוני קבלה}};
+\draw[dashed,gray,<->] (l2)--(r2) node[midway,above]{\he{מטריצת עקיבות}};
+\draw[dashed,gray,<->] (l3)--(r3) node[midway,above]{\he{חוזי ממשק}};
+\end{tikzpicture}

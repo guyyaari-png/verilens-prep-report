@@ -1,0 +1,22 @@
+% wbs: TikZ / pgfplots source, built inside ltrdiagram (LTR)
+\begin{tikzpicture}[font=\sffamily\scriptsize,
+  root/.style={draw=acc2,fill=soft2,very thick,rounded corners=3pt,minimum width=3cm,minimum height=0.8cm,align=center},
+  l1/.style={draw=acc,fill=soft,rounded corners=3pt,text width=2.3cm,minimum height=0.8cm,align=center},
+  l2/.style={draw=gray!60,fill=white,rounded corners=2pt,text width=2.3cm,align=center,inner sep=2pt},
+  ed/.style={thick,ink!50}]
+\node[root] (r) at (7.5,0) {\en{\textbf{VeriLens 1.0}}};
+\foreach \i/\n/\t/\a/\b/\c in {
+ 0/1/{\he{1. ניהול}}/{\he{תוכנית ולו״ז}}/{\he{סיכונים}}/{\he{דיווח לחוזה}},
+ 1/2/{\he{2. נתונים}}/{\he{מאגר אימון}}/{\he{מאגר כיול}}/\en{VL-Wild},
+ 2/3/{\he{3. מנוע אימות}}/{\he{שכבות 1 עד 3}}/{\he{שקלול וכיול}}/\en{API},
+ 3/4/{\he{4. מסוף ושילוב}}/{\he{מסוף העורך}}/{\he{תוספים למערכות תוכן}}/{\he{לוח בקרה}},
+ 4/5/{\he{5. תקן אתי}}/{\he{טיוטה וסדנאות}}/{\he{סבב ציבורי}}/{\he{נוהל הסמכה}},
+ 5/6/{\he{6. פיילוט}}/{\he{5 מערכות}}/{\he{הדרכה}}/{\he{מדידת יעדים}}}{
+  \node[l1] (n\n) at (\i*2.75+0.6,-1.5) {\t};
+  \draw[ed] (r.south)--++(0,-0.35)-|(n\n.north);
+  \node[l2] (a\n) at (\i*2.75+0.6,-2.7) {\a};
+  \node[l2] (b\n) at (\i*2.75+0.6,-3.4) {\b};
+  \node[l2] (c\n) at (\i*2.75+0.6,-4.1) {\c};
+  \draw[ed,thin] (n\n.south)--(a\n.north);
+}
+\end{tikzpicture}
