@@ -22,3 +22,4 @@
 | 16 | [16-approve-all-fixes.md](16-approve-all-fixes.md) | 2026-11-21 | מאשר לך את כל המשימות, תרוץ עליהם |
 | 17 | [17-enforcement.md](17-enforcement.md) | 2026-11-22 | איך נאכף התקן האתי |
 | 18 | [18-imagewhisperer-check.md](18-imagewhisperer-check.md) | 2026-11-22 | https://imagewhisperer.org |
+| 19 | [19-israeli-market.md](19-israeli-market.md) | 2026-11-22 | בוא נפתח את זה בשוק הישראלי |
