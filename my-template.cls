@@ -1,12 +1,14 @@
 %% =====================================================================
 %%  my-template.cls  —  תבנית לדוחות בעברית ובאנגלית (LuaLaTeX)
-%%  גרסה: 1.2  |  תאריך: 2026-11-21
+%%  גרסה: 1.3  |  תאריך: 2026-11-22
 %%  מחברים: גיא יערי, פז ניסים
 %%  הידור: lualatex -> biber -> lualatex -> lualatex
 %%  רשימת פקודות מלאה ודוגמאות: TEMPLATE.md
 %%
 %%  יומן שינויים (Changelog)
 %%  ----------------------------------------------------------------
+%%  1.3  2026-11-22  \repourl ו-\repolink: קישור למאגר בעמוד השער; תיבות לא נשברות בין עמודים
+%%       (לפי שיעור 3: אין תיבה שנחתכת באמצע)
 %%  1.2  2026-11-21  csquotes לציטוטים בביבליוגרפיה; פקודה \templatehelp שמדפיסה
 %%       את רשימת הפקודות מתוך המסמך עצמו
 %%  1.1  2026-11-21  סימן כיוון (RLM) בפקודות הסימון; "נספח" בכותרות הנספחים;
@@ -20,8 +22,8 @@
 %%       שלב 6  ביבליוגרפיה (biblatex+biber, IEEE), TEMPLATE.md, דוגמה
 %% =====================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{my-template}[2026/11/21 v1.2 Hebrew-English report template]
-\def\mytemplate@version{1.2}
+\ProvidesClass{my-template}[2026/11/21 v1.3 Hebrew-English report template]
+\def\mytemplate@version{1.3}
 
 \LoadClass[11pt,a4paper,oneside]{report}
 
@@ -142,7 +144,7 @@
 % ארבעה סוגי תיבות: מסקנה, הערה, אזהרה, דוגמה
 \RequirePackage{float}
 \RequirePackage[most]{tcolorbox}
-\tcbset{mybox/.style={enhanced,breakable,boxrule=0.6pt,arc=3pt,
+\tcbset{mybox/.style={enhanced,boxrule=0.6pt,arc=3pt,
   left=6pt,right=6pt,top=4pt,bottom=4pt,fonttitle=\sffamily\bfseries\small,
   coltitle=white,before skip=6pt,after skip=6pt,halign title=flush right}}
 % התיבה עצמה נבנית בסביבה אנגלית (מסגרת LTR) והתוכן בעברית (RTL)
@@ -180,7 +182,7 @@
 \newcommand{\students}[1]{\renewcommand{\@students}{#1}}
 \newcommand{\reportdate}[1]{\renewcommand{\@reportdate}{#1}}
 \newcommand{\docversion}[1]{\renewcommand{\@docversion}{#1}}
-% v1.2: קישור למאגר הקוד, מוצג בעמוד השער וזמין בפקודה \repolink
+% v1.3: קישור למאגר הקוד, מוצג בעמוד השער וזמין בפקודה \repolink
 \newcommand{\repourl}[1]{\renewcommand{\@repourl}{#1}}
 \newcommand{\repolink}{\rlm\foreignlanguage{english}{\textcolor{acc}{\url{\@repourl}}}}
 \newcommand{\shorttitle}[1]{\renewcommand{\@shorttitle}{#1}}
