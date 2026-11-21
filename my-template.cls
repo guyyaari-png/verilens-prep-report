@@ -182,7 +182,7 @@
 \newcommand{\docversion}[1]{\renewcommand{\@docversion}{#1}}
 % v1.2: קישור למאגר הקוד, מוצג בעמוד השער וזמין בפקודה \repolink
 \newcommand{\repourl}[1]{\renewcommand{\@repourl}{#1}}
-\newcommand{\repolink}{\rlm\foreignlanguage{english}{\url{\@repourl}}}
+\newcommand{\repolink}{\rlm\foreignlanguage{english}{\textcolor{acc}{\url{\@repourl}}}}
 \newcommand{\shorttitle}[1]{\renewcommand{\@shorttitle}{#1}}
 
 \pagestyle{fancy}\fancyhf{}
