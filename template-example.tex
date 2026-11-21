@@ -1,0 +1,22 @@
+% template-example.tex — עמוד דוגמה לתבנית my-template.cls
+\documentclass{my-template}
+\addbibresource{references.bib}
+\reporttagline{דוגמה}\reporttitle{\en{Template}}\reportsubtitle{עמוד דוגמה לתבנית}
+\students{גיא יערי ופז ניסים}\course{יישומי \en{Vibe Coding} ו-\en{AI}}\lecturer{ד״ר יורם סגל}
+\institution{אוניברסיטת חיפה}\reportdate{\num{21.11.2026}}\docversion{\num{1.1}}\shorttitle{דוגמה}
+\begin{document}
+\makecover
+\chapter{פרק לדוגמה}
+\section{טקסט}
+מילה באנגלית \en{C2PA}, ביטוי \en{Content Credentials}, מספר \num{2026}, אחוז \num{42.8\%}, גרסה \num{1.0}, קובץ \code{main.tex}, דרישה \req{FR-01}, ומקור~\cite{npr2023}.
+\begin{keybox}[מסקנה]תיבת מסקנה.\end{keybox}
+\begin{warnbox}תיבת אזהרה.\end{warnbox}
+\begin{table}[!htbp]\centering\caption{טבלה: העמודה הראשונה מימין}\label{tab:demo}
+\begin{tabularx}{\linewidth}{@{}l Y l@{}}\toprule \colhead{מזהה} & \colhead{תיאור} & \colhead{מחיר}\\\midrule
+\req{IF-01} ממשק & תא שמתחיל באנגלית ונשאר מימין לשמאל & \num{1,500} ₪ בחודש\\\bottomrule\end{tabularx}\end{table}
+\begin{figure}[!htbp]\begin{ltrdiagram}\begin{tikzpicture}
+\node[draw,rounded corners] (a) {\he{קלט}};\node[draw,rounded corners,right=2cm of a] (b) {\he{80 עד 100: חשד גבוה}};\draw[-Stealth] (a)--(b);
+\end{tikzpicture}\end{ltrdiagram}\caption{תרשים בסביבה אנגלית}\label{fig:demo}\end{figure}
+ראו טבלה~\ref{tab:demo} ואיור~\ref{fig:demo}.
+\printreferences
+\end{document}
