@@ -17,3 +17,4 @@
 | 11 | [11-does-it-meet-requirements.md](11-does-it-meet-requirements.md) | 2026-11-21 | זה עונה על כל הדרישות של המרצה להגשה בעצם? |
 | 12 | [12-assignment-2-rebuild.md](12-assignment-2-rebuild.md) | 2026-11-21 | ציון 93 |
 | 13 | [13-feedback-and-github.md](13-feedback-and-github.md) | 2026-11-21 | המשוב על מטלה 1 וקישור למאגר |
+| 14 | [14-self-grade.md](14-self-grade.md) | 2026-11-21 | שים אז 85, וזה nisim |
