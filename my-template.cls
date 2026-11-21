@@ -170,7 +170,7 @@
 \newcommand{\@reporttagline}{}\newcommand{\@course}{}
 \newcommand{\@institution}{}\newcommand{\@lecturer}{}
 \newcommand{\@students}{}\newcommand{\@reportdate}{}
-\newcommand{\@docversion}{}\newcommand{\@shorttitle}{}
+\newcommand{\@docversion}{}\newcommand{\@shorttitle}{}\newcommand{\@repourl}{}
 \newcommand{\reporttitle}[1]{\renewcommand{\@reporttitle}{#1}}
 \newcommand{\reportsubtitle}[1]{\renewcommand{\@reportsubtitle}{#1}}
 \newcommand{\reporttagline}[1]{\renewcommand{\@reporttagline}{#1}}
@@ -180,6 +180,9 @@
 \newcommand{\students}[1]{\renewcommand{\@students}{#1}}
 \newcommand{\reportdate}[1]{\renewcommand{\@reportdate}{#1}}
 \newcommand{\docversion}[1]{\renewcommand{\@docversion}{#1}}
+% v1.2: קישור למאגר הקוד, מוצג בעמוד השער וזמין בפקודה \repolink
+\newcommand{\repourl}[1]{\renewcommand{\@repourl}{#1}}
+\newcommand{\repolink}{\rlm\foreignlanguage{english}{\url{\@repourl}}}
 \newcommand{\shorttitle}[1]{\renewcommand{\@shorttitle}{#1}}
 
 \pagestyle{fancy}\fancyhf{}
@@ -218,6 +221,7 @@
    \textbf{מוסד:} & \@institution\\
    \textbf{תאריך:} & \@reportdate\\
    \textbf{גרסת מסמך:} & \@docversion\\
+   \textbf{מאגר:} & \repolink\\
    \end{tabular}\par}
   \vspace{0.8cm}
   {\scriptsize\color{gray}© \num{2026} \@students. כל הזכויות שמורות.\par}
@@ -263,6 +267,7 @@
   \code{ltrdiagram} & סביבה אנגלית ממורכזת לתרשים \\
   \code{Y, C} & עמודות רחבות ב-\code{tabularx} \\
   \code{\textbackslash makecover} & עמוד שער \\
+  \code{\textbackslash repourl, \textbackslash repolink} & קישור למאגר, בעמוד השער ובטקסט \\
   \code{\textbackslash printreferences} & רשימת מקורות עם כותרת בעברית \\
   \code{\textbackslash templatehelp} & הטבלה הזאת \\
   \bottomrule

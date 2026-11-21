@@ -35,6 +35,7 @@
 | `Y`, `C` | עמודות רחבות ב-tabularx (מיושרת, ממורכזת) | `{@{}l Y Y@{}}` |
 | `\makecover` | עמוד שער עם מסגרת, בלי מספר עמוד | |
 | `\reporttitle`, `\reportsubtitle`, `\reporttagline`, `\students`, `\course`, `\lecturer`, `\institution`, `\reportdate`, `\docversion`, `\shorttitle` | שדות לעמוד השער ולכותרות | |
+| `\repourl{...}`, `\repolink` | קישור למאגר: שדה לעמוד השער, ופקודה שמדפיסה אותו בטקסט | `\repolink` |
 | `\printreferences` | רשימת מקורות: כותרת בעברית, רשומות באנגלית | |
 | `\templatehelp` | מדפיס בתוך המסמך טבלה של כל הפקודות האלה | `\templatehelp` |
 
