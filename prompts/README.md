@@ -16,3 +16,4 @@
 | 10 | [10-md-summary.md](10-md-summary.md) | 2026-11-17 | תוציא לי קובץ md |
 | 11 | [11-does-it-meet-requirements.md](11-does-it-meet-requirements.md) | 2026-11-21 | זה עונה על כל הדרישות של המרצה להגשה בעצם? |
 | 12 | [12-assignment-2-rebuild.md](12-assignment-2-rebuild.md) | 2026-11-21 | ציון 93 |
+| 13 | [13-feedback-and-github.md](13-feedback-and-github.md) | 2026-11-21 | המשוב על מטלה 1 וקישור למאגר |
