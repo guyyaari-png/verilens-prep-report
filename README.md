@@ -26,7 +26,7 @@
 ```text
 verilens-report/
 ├── main.tex                 הקובץ הראשי: רק רשימת פרקים
-├── my-template.cls          התבנית שלנו: כל העיצוב (גרסה 1.1)
+├── my-template.cls          התבנית שלנו: כל העיצוב (גרסה 1.2)
 ├── TEMPLATE.md              רשימת הפקודות של התבנית ויומן השינויים
 ├── template-example.tex     עמוד דוגמה לתבנית
 ├── references.bib           בסיס הנתונים של המקורות (biber)

@@ -1,12 +1,14 @@
 %% =====================================================================
 %%  my-template.cls  —  תבנית לדוחות בעברית ובאנגלית (LuaLaTeX)
-%%  גרסה: 1.1  |  תאריך: 2026-11-21
+%%  גרסה: 1.2  |  תאריך: 2026-11-21
 %%  מחברים: גיא יערי, פז ניסים
 %%  הידור: lualatex -> biber -> lualatex -> lualatex
 %%  רשימת פקודות מלאה ודוגמאות: TEMPLATE.md
 %%
 %%  יומן שינויים (Changelog)
 %%  ----------------------------------------------------------------
+%%  1.2  2026-11-21  csquotes לציטוטים בביבליוגרפיה; פקודה \templatehelp שמדפיסה
+%%       את רשימת הפקודות מתוך המסמך עצמו
 %%  1.1  2026-11-21  סימן כיוון (RLM) בפקודות הסימון; "נספח" בכותרות הנספחים;
 %%       כותרות עליונות ותחתונות בעברית גם בעמודי המקורות; שבירת קישורים ארוכים
 %%  1.0  2026-11-21  גרסה ראשונה, בנויה בשישה שלבים:
@@ -18,8 +20,8 @@
 %%       שלב 6  ביבליוגרפיה (biblatex+biber, IEEE), TEMPLATE.md, דוגמה
 %% =====================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{my-template}[2026/11/21 v1.1 Hebrew-English report template]
-\def\mytemplate@version{1.1}
+\ProvidesClass{my-template}[2026/11/21 v1.2 Hebrew-English report template]
+\def\mytemplate@version{1.2}
 
 \LoadClass[11pt,a4paper,oneside]{report}
 
@@ -232,6 +234,7 @@
 %% ---------------------------------------------------------------------
 %% שלב 6: ביבליוגרפיה וקישורים
 %% ---------------------------------------------------------------------
+\RequirePackage{csquotes}
 \RequirePackage[backend=biber,style=ieee,sorting=none,maxnames=6,autolang=other]{biblatex}
 % רשימת המקורות: כותרת בעברית, הרשומות עצמן באנגלית (LTR)
 \newcommand{\printreferences}{%
@@ -241,5 +244,29 @@
 \RequirePackage{xurl}
 \RequirePackage[hidelinks,unicode]{hyperref}
 \RequirePackage{bookmark}
+
+% \templatehelp: התבנית מסבירה את עצמה. מדפיסה טבלה של כל הפקודות (גרסה 1.2)
+\newcommand{\templatehelp}{%
+  \begin{table}[H]\centering\small
+  \caption{פקודות התבנית \code{my-template.cls}, גרסה \num{\mytemplate@version}}
+  \begin{tabularx}{\linewidth}{@{}l Y@{}}
+  \toprule
+  \colhead{פקודה} & \colhead{מה היא עושה} \\
+  \midrule
+  \code{\textbackslash en} & מילה, שם או קיצור באנגלית, כיחידה אחת \\
+  \code{\textbackslash num} & מספר, אחוז, תאריך או גרסה, משמאל לימין \\
+  \code{\textbackslash he} & עברית בתוך סביבה אנגלית, למשל תווית בתרשים \\
+  \code{\textbackslash code} & שם קובץ או קוד קצר בתוך שורה \\
+  \code{\textbackslash req} & מזהה של דרישה, בדיקה, סיכון או תוצר \\
+  \code{\textbackslash colhead} & כותרת עמודה בטבלה \\
+  \code{keybox, notebox, warnbox, examplebox} & ארבע תיבות: מסקנה, הערה, אזהרה, דוגמה \\
+  \code{ltrdiagram} & סביבה אנגלית ממורכזת לתרשים \\
+  \code{Y, C} & עמודות רחבות ב-\code{tabularx} \\
+  \code{\textbackslash makecover} & עמוד שער \\
+  \code{\textbackslash printreferences} & רשימת מקורות עם כותרת בעברית \\
+  \code{\textbackslash templatehelp} & הטבלה הזאת \\
+  \bottomrule
+  \end{tabularx}
+  \end{table}}
 
 \endinput
