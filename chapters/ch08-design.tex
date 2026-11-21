@@ -3,7 +3,7 @@
 הפתרון בנוי משני חלקים שעובדים יחד: פלטפורמה טכנולוגית שמייצרת ראיות, ותקן אתי שקובע מה עושים עם הראיות. הפרק מתאר את שניהם, מהתמונה הכללית ועד רמת הרכיב.
 
 \section{הקשר המערכת}
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \begin{ltrdiagram}
 \input{figures/fig-context}
 \end{ltrdiagram}
@@ -13,7 +13,7 @@
 ראו טבלה~\ref{tab:icd}.
 
 
-\begin{table}[!htbp]\centering
+\begin{table}[!htb]\centering
 \caption{מסמך ממשקים מקוצר: חמשת הממשקים החיצוניים}\label{tab:icd}
 \small
 \begin{tabularx}{\linewidth}{@{}l Y l l@{}}
@@ -32,7 +32,7 @@
 \section{ארכיטקטורה ברמת מערכת}
 איור~\ref{fig:arch} מציג את שש תתי המערכות. העיקרון המרכזי הוא הפרדה בין ייצור ראיות (שכבות \num{1} עד \num{3}) לבין החלטה (שכבה \num{4}): כל שכבת ראיות מוסיפה ממצאים לתיק התמונה, ורק מנוע השקלול ממיר אותם לציון ולהמלצה.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \begin{ltrdiagram}
 \input{figures/fig-arch}
 \end{ltrdiagram}
@@ -42,7 +42,7 @@
 ראו טבלה~\ref{tab:subsys}.
 
 
-\begin{table}[!htbp]\centering
+\begin{table}[!htb]\centering
 \caption{תתי המערכות: תפקיד, קלט, פלט וטכנולוגיה}\label{tab:subsys}
 \small
 \begin{tabularx}{\linewidth}{@{}l Y Y l@{}}
@@ -63,7 +63,7 @@
 \section{זרימת ההחלטה}
 איור~\ref{fig:flow} מגדיר את הנוהל המחייב. הוא מקודד במערכת ומקביל לכלל \num{4} בתקן \en{TRUTH-IMG}.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \begin{ltrdiagram}
 \input{figures/fig-flow}
 \end{ltrdiagram}
@@ -92,7 +92,7 @@ s = 100\cdot \mathrm{Cal}\!\left(\sigma\Big(\beta_0+\sum_{k=1}^{4}\beta_k\,\math
 
 בהתפלגות המתוכננת, \num{91\%} מהתמונות הסינתטיות מקבלות \num{80} ומעלה (עומד ביעד \req{G-1}), ורק \num{1\%} מהאמיתיות. הספים \num{30} ו-\num{80} נבחרו כך שאזור ״לא ודאי״ יכיל לכל היותר \num{15\%} מהתמונות. כך העומס על הבודקים האנושיים נשאר סביר, וכמעט כל טעויות המודל מגיעות לאדם. איור~\ref{fig:dist} מציג את ההתפלגות הצפויה. זהו תכנון, ובפרויקט יוחלף בנתונים אמיתיים מהפיילוט.
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \begin{ltrdiagram}
 \input{figures/fig-dist}
 \end{ltrdiagram}
@@ -102,7 +102,7 @@ s = 100\cdot \mathrm{Cal}\!\left(\sigma\Big(\beta_0+\sum_{k=1}^{4}\beta_k\,\math
 \section{תווית לקורא}
 המערכת מצמידה לכל תמונה אחת מארבע תוויות, לפי הסיווג בטבלה~\ref{tab:taxonomy}. לחיצה על התווית פותחת את תעודת המקור ואת רשומת ההחלטה, בלי פרטים מזהים של הבודק (איור~\ref{fig:labels}).
 
-\begin{figure}[!htbp]
+\begin{figure}[!htb]
 \begin{ltrdiagram}
 \input{figures/fig-labels}
 \end{ltrdiagram}
@@ -112,7 +112,7 @@ s = 100\cdot \mathrm{Cal}\!\left(\sigma\Big(\beta_0+\sum_{k=1}^{4}\beta_k\,\math
 \section{התקן האתי \en{TRUTH-IMG}}\label{sec:truthimg}
 התקן מתרגם את העקרונות של \en{SPJ}, \en{AP} ואמנת פריז~\cite{spj2014,ap2023,paris2023} לעשרה כללים מחייבים. כל כלל ניתן לביקורת, כלומר אפשר לבדוק בדיעבד אם קוים (טבלה~\ref{tab:truth}).
 
-\begin{table}[!htbp]\centering
+\begin{table}[!htb]\centering
 \caption{עשרת הכללים של \en{TRUTH-IMG} גרסה \num{1.0}}\label{tab:truth}
 \small
 \begin{tabularx}{\linewidth}{@{}c Y Y@{}}
@@ -138,8 +138,8 @@ s = 100\cdot \mathrm{Cal}\!\left(\sigma\Big(\beta_0+\sum_{k=1}^{4}\beta_k\,\math
 \section{ארכיטקטורה לקנה מידה}
 המעבר מ-\num{2} מיליון ל-\num{50} מיליון תמונות בחודש (פי \num{25}) אינו דורש שינוי בארכיטקטורה, אלא הוספת משאבים. כל שכבה היא שירות נפרד מעל תור הודעות, והגלאים רצים על מאגר \en{GPU} שגדל אוטומטית לפי עומס. התמונות מנותבות לאזור אחסון לפי מיקום הלקוח (אירופה, ישראל, ארה״ב), בהתאם ל-\req{SR-04} (טבלה~\ref{tab:capacity}).
 
-\begin{table}[!htbp]\centering
-\caption{תכנון קיבולת: פיילוט מול יעד \num{36} חודשים}\label{tab:capacity}
+\begin{table}[H]\centering
+\caption{תכנון קיבולת: מבחן עומס מול יעד \num{36} חודשים}\label{tab:capacity}
 \begin{tabularx}{\linewidth}{@{}Y c c@{}}
 \toprule
 \textbf{פרמטר} & \textbf{מבחן עומס (חודש \num{16})} & \textbf{יעד (חודש \num{36})} \\
