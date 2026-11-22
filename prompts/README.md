@@ -24,3 +24,4 @@
 | 18 | [18-imagewhisperer-check.md](18-imagewhisperer-check.md) | 2026-11-22 | https://imagewhisperer.org |
 | 19 | [19-israeli-market.md](19-israeli-market.md) | 2026-11-22 | בוא נפתח את זה בשוק הישראלי |
 | 20 | [20-regrade.md](20-regrade.md) | 2026-11-22 | שיערוך של הסוכן לציון כרגע |
+| 21 | [21-phase-a-prototype.md](21-phase-a-prototype.md) | 2026-11-22 | אב טיפוס קטן (מומלץ) |
